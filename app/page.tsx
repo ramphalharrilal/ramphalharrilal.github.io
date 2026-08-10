@@ -260,6 +260,14 @@ export default function Home() {
             >
               GitHub <span aria-hidden="true">↗</span>
             </a>
+            <a
+              className="button button-upwork"
+              href="https://www.upwork.com/freelancers/~0123e265f21c212396?mp_source=share"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Hire me on Upwork <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
 
@@ -707,11 +715,21 @@ export default function Home() {
               <a href="https://wa.me/18687525635" target="_blank" rel="noreferrer">WhatsApp ↗</a>
             </div>
           </article>
+
+          <a
+            className="contact-card upwork-contact"
+            href="https://www.upwork.com/freelancers/~0123e265f21c212396?mp_source=share"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="contact-card-label">Freelance projects · View my professional profile</span>
+            <strong>Hire me on Upwork</strong>
+            <span className="contact-card-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
 
         <div className="contact-links" aria-label="Professional profiles">
           <a href="https://github.com/ramphalharrilal" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://www.upwork.com/freelancers/~0123e265f21c212396?mp_source=share" target="_blank" rel="noreferrer">Upwork ↗</a>
           <a href="/docs/Ramphal_Harrilal_Final_Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
         </div>
       </section>
