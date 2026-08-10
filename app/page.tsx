@@ -35,6 +35,7 @@ const featuredWork = [
       "Organized a life story, services, testimonials, videos and promotional materials into a clear public portfolio for a chaplain, author, motivational speaker and community facilitator.",
     tags: ["Portfolio", "Storytelling", "Video", "Brand direction"],
     accent: "gold",
+    href: "https://gaininggroundyouthservices.com/",
   },
 ];
 
