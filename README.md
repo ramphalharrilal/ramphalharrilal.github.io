@@ -11,7 +11,7 @@ Professional portfolio for Ramphal Harrilal, featuring technical support, softwa
 - Combination KEA Inventory System
 - Kenswick Meadows Community Association website and communications
 - Dreamhouse Furniture and Appliances digital marketing
-- Del Ray and Gaining Ground portfolio storytelling
+- Dale Ray - Gaining Ground Youth Services 501 C 3 Nonprofit
 - Java, Python, QA, and IT support projects
 
 The site is built with Next.js and exported as a static website for GitHub Pages.
