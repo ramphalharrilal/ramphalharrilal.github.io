@@ -10,6 +10,7 @@
   --blue: #3157d6;
   --green: #1f7a5a;
   --gold: #c59016;
+  --upwork: #14a800;
 }
 
 * { box-sizing: border-box; }
@@ -87,6 +88,8 @@ a { color: inherit; text-decoration: none; }
 .button-primary { background: var(--ink); color: var(--white); }
 .button-primary:hover { background: var(--orange); border-color: var(--orange); }
 .button-quiet:hover { background: var(--white); }
+.button-upwork { background: var(--white); border-color: var(--upwork); color: #0b6900; }
+.button-upwork:hover { background: var(--upwork); border-color: var(--upwork); color: var(--white); }
 
 .portrait-wrap { align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
 .portrait-stage {
@@ -425,9 +428,12 @@ a { color: inherit; text-decoration: none; }
 .contact-card:hover { background: var(--white); color: var(--ink); }
 .contact-card.email-contact { grid-column: 1 / -1; min-height: 210px; color: var(--orange); }
 .contact-card.email-contact:hover { background: var(--orange); color: var(--ink); }
+.contact-card.upwork-contact { grid-column: 1 / -1; min-height: 190px; background: var(--upwork); color: var(--white); }
+.contact-card.upwork-contact:hover { background: #0b6900; color: var(--white); }
 .contact-card-label { font: 650 10px var(--font-geist-mono), monospace; text-transform: uppercase; letter-spacing: .12em; opacity: .68; }
 .contact-card strong { max-width: 100%; font-size: clamp(25px, 2.8vw, 44px); line-height: 1.05; letter-spacing: -.045em; overflow-wrap: anywhere; }
 .email-contact strong { padding-right: 70px; font-size: clamp(31px, 4.6vw, 70px); }
+.upwork-contact strong { padding-right: 70px; font-size: clamp(36px, 5vw, 76px); }
 .contact-card-arrow { position: absolute; right: clamp(26px, 3.6vw, 48px); bottom: clamp(26px, 3.6vw, 48px); font-size: 34px; }
 .contact-actions { display: flex; flex-wrap: wrap; gap: 9px; }
 .contact-actions a { padding: 10px 14px; border: 1px solid currentColor; border-radius: 100px; font-size: 12px; font-weight: 700; }
@@ -498,7 +504,7 @@ footer a { justify-self: end; }
   .credential-card { min-height: 390px; border-right: 0; border-bottom: 1px solid var(--ink); }
   .credential-card:last-child { border-bottom: 0; }
   .contact-grid { grid-template-columns: 1fr; }
-  .contact-card.email-contact { grid-column: auto; }
+  .contact-card.email-contact, .contact-card.upwork-contact { grid-column: auto; }
   footer { grid-template-columns: 1fr auto; }
   footer span:nth-child(2) { display: none; }
 }
@@ -537,7 +543,9 @@ footer a { justify-self: end; }
   .contact-section h2 { margin-top: 64px; }
   .contact-card { min-height: 220px; }
   .contact-card.email-contact { min-height: 190px; }
+  .contact-card.upwork-contact { min-height: 190px; }
   .email-contact strong { padding-right: 0; font-size: 28px; }
+  .upwork-contact strong { padding-right: 0; font-size: 32px; }
   .contact-card-arrow { display: none; }
   footer span:first-child { max-width: 180px; }
 }
