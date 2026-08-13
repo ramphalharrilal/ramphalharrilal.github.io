@@ -239,16 +239,21 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Technology · Marketing · Digital Operations</p>
+          <p className="eyebrow">Websites · Digital Marketing · Virtual Business Support</p>
           <h1>
             I make technology
             <span>work for people.</span>
           </h1>
           <p className="hero-intro">
-            I&apos;m Ramphal, a technical support professional and Computer Science
-            student who turns everyday problems and business ideas into organized
-            systems, useful software, strong content and better digital experiences.
+            I build professional websites, create promotional content and provide
+            virtual business support, while bringing the same organized, practical
+            approach to technical support, QA and software.
           </p>
+          <ul className="hero-services" aria-label="Featured services">
+            <li>Website Design</li>
+            <li>Flyers &amp; Social Media Content</li>
+            <li>Virtual Administrative Support</li>
+          </ul>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
               Explore my work <span aria-hidden="true">↓</span>
