@@ -652,7 +652,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="credibility-section" aria-label="Education and experience">
+      <section className="credibility-section" aria-label="Education, experience and professional affiliation">
         <div className="credential-card dark-card">
           <p className="eyebrow">Education</p>
           <h3>B.S. Computer Science</h3>
@@ -671,6 +671,16 @@ export default function Home() {
           <p>40+ daily requests · 400 student caseload</p>
           <span>Calm communication, accurate records and dependable follow through.</span>
         </div>
+        <a className="affiliation-banner" href="https://www.ttcs.tt/" target="_blank" rel="noreferrer">
+          <div>
+            <p className="eyebrow">Professional affiliation</p>
+            <h3>Trinidad and Tobago Computer Society</h3>
+          </div>
+          <div className="affiliation-meta">
+            <strong>TTCS Member</strong>
+            <span>Joined 2026 · View organization ↗</span>
+          </div>
+        </a>
       </section>
 
       <section className="contact-section" id="contact">
