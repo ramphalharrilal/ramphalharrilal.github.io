@@ -79,7 +79,27 @@ a { color: inherit; text-decoration: none; }
   max-width: 690px; margin: 42px 0 0; color: #37342f;
   font-size: clamp(18px, 1.6vw, 24px); line-height: 1.55; letter-spacing: -.02em;
 }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; }
+
+.hero-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-services li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--ink);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+\n.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px; }
 .button {
   min-height: 54px; padding: 0 22px; display: inline-flex; align-items: center; justify-content: center; gap: 24px;
   border: 1px solid var(--ink); border-radius: 100px; font-weight: 650; transition: transform .2s ease, background .2s ease, color .2s ease;
