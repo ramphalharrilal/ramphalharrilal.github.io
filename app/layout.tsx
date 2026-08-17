@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Ramphal Harrilal Portfolio",
   description:
-    "Technical support, QA, software, marketing and real world digital work by Ramphal Harrilal.",
+    "Customer-focused websites, business solutions, technical support, QA and digital work by Ramphal Harrilal.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
