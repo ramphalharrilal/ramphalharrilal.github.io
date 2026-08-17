@@ -1,6 +1,16 @@
 const featuredWork = [
   {
     number: "01",
+    type: "Website care & customer protection",
+    title: "SiteCare Website Care Monitor",
+    description:
+      "A live website care dashboard that tells a business whether customers can reach the site, trust the connection and use its inquiry path, then puts the most urgent fix first.",
+    tags: ["Customer access", "Lead protection", "Trust", "Clear priorities"],
+    accent: "sitecare",
+    href: "https://ramphalharrilal.github.io/website-care-monitor/",
+  },
+  {
+    number: "02",
     type: "Business software",
     title: "Combination KEA Inventory System",
     description:
@@ -9,7 +19,7 @@ const featuredWork = [
     accent: "orange",
   },
   {
-    number: "02",
+    number: "03",
     type: "Website & communications",
     title: "Kenswick Meadows Community Association",
     description:
@@ -19,7 +29,7 @@ const featuredWork = [
     href: "https://kenswickmeadows.org/",
   },
   {
-    number: "03",
+    number: "04",
     type: "Marketing & digital operations",
     title: "Dreamhouse Furniture & Appliances",
     description:
@@ -28,7 +38,7 @@ const featuredWork = [
     accent: "green",
   },
   {
-    number: "04",
+    number: "05",
     type: "Portfolio & storytelling",
     title: "Dale Ray - Gaining Ground Youth Services 501 C 3 Nonprofit",
     description:
@@ -286,7 +296,7 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Career highlights">
-        <div><strong>4</strong><span>Practical systems built around real workflows</span></div>
+        <div><strong>5</strong><span>Practical solutions built around real workflows</span></div>
         <div><strong>40+</strong><span>Daily support requests handled</span></div>
         <div><strong>3+</strong><span>Years managing a live website</span></div>
         <div><strong>6+</strong><span>Marketing content formats created</span></div>
@@ -300,7 +310,7 @@ export default function Home() {
           </div>
           <p>
             My strongest work starts with a real need: faster access to inventory,
-            clearer communication, better customer experiences or a professional
+            clearer communication, protected customer inquiries or a professional
             digital presence.
           </p>
         </div>
@@ -325,7 +335,11 @@ export default function Home() {
                 <ul aria-label={`${project.title} skills`}>
                   {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
-                {project.href && <span className="card-link">Visit live site ↗</span>}
+                {project.href && (
+                  <span className="card-link">
+                    {project.accent === "sitecare" ? "Open live dashboard ↗" : "Visit live site ↗"}
+                  </span>
+                )}
               </Wrapper>
             );
           })}
