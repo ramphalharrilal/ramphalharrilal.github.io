@@ -42,62 +42,35 @@ const featuredWork = [
 const technicalProjects = [
   {
     index: "A",
-    title: "Java Application Collection",
+    title: "RelayDesk Support Operations",
     description:
-      "Eight documented applications covering object oriented programming, interfaces, streams, collections, GUI development and practical problem solving.",
-    detail: "Quiz game · Library system · Student records · Course enrollment · Stock analysis",
+      "A privacy-aware WhatsApp support operations system with controlled knowledge responses, human handoff, prioritized tickets, audit events, webhook verification and automated tests.",
+    detail: "Node.js · Webhooks · HMAC · Privacy · Automated testing",
+    href: "https://github.com/ramphalharrilal/whatsapp-support-operations",
   },
   {
     index: "B",
-    title: "Manual QA Portfolio",
+    title: "Hardware Inventory System",
     description:
-      "A complete testing pack with a test plan, 12 structured test cases, a detailed bug report and a regression checklist.",
-    detail: "Test planning · Severity · Reproduction steps · Regression",
+      "A Java 17 operations dashboard designed around a real retail workflow, with layered architecture, validated CSV imports, inventory-risk metrics, JUnit coverage and continuous integration.",
+    detail: "Java 17 · Swing · Maven · JUnit · GitHub Actions",
+    href: "https://github.com/ramphalharrilal/hardware-inventory-system",
   },
   {
     index: "C",
-    title: "IT Support Documentation",
+    title: "Manual QA Portfolio",
     description:
-      "Plain language support guides built around the issues users actually face, from Microsoft 365 and printers to Windows connectivity and escalation.",
-    detail: "Troubleshooting · Onboarding · Escalation · User guidance",
+      "A risk-based testing portfolio with a test plan, structured test cases, a reproducible defect report, regression coverage and business-readable Gherkin scenarios.",
+    detail: "Manual testing · Gherkin · BDD · Regression · Defect reporting",
+    href: "https://github.com/ramphalharrilal/manual-qa-portfolio",
   },
   {
     index: "D",
-    title: "Python Projects",
+    title: "IT Service Desk Operations",
     description:
-      "Four documented programs covering file handling, exception safety, dictionaries, string analysis, validation and structured grade records.",
-    detail: "File Error Handler · Dictionary Inverter · Name Analyzer · Student Gradebook",
-  },
-];
-
-const pythonProjects = [
-  {
-    number: "PY 01",
-    title: "File Error Handler",
-    description: "Reads file content safely and responds clearly when a requested file cannot be found.",
-    concepts: "Functions · File input · Exceptions",
-    href: "https://github.com/ramphalharrilal/python-projects/tree/main/file-error-handler",
-  },
-  {
-    number: "PY 02",
-    title: "Dictionary Inverter",
-    description: "Transforms categorized text data into an inverted dictionary and writes the result to a file.",
-    concepts: "Dictionaries · Lists · File I/O",
-    href: "https://github.com/ramphalharrilal/python-projects/tree/main/dictionary-inverter",
-  },
-  {
-    number: "PY 03",
-    title: "Name Analyzer",
-    description: "Validates a name, then analyzes its characters, vowels and reversed form.",
-    concepts: "Strings · Slicing · Loops · Validation",
-    href: "https://github.com/ramphalharrilal/python-projects/tree/main/name-analyzer",
-  },
-  {
-    number: "PY 04",
-    title: "Student Gradebook",
-    description: "Builds and displays organized student grade records from related data collections.",
-    concepts: "Dictionaries · Lists · Zip · Enumerate",
-    href: "https://github.com/ramphalharrilal/python-projects/tree/main/student-gradebook",
+      "A service-desk operating playbook with incident models, case studies, Microsoft 365 workflows, escalation records and privacy-safe PowerShell diagnostics.",
+    detail: "PowerShell · Microsoft 365 · Triage · Escalation · Runbooks",
+    href: "https://github.com/ramphalharrilal/it-support-documentation",
   },
 ];
 
@@ -239,7 +212,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Websites · Digital Marketing · Virtual Business Support</p>
+          <p className="eyebrow">Websites · Technical Operations · QA · Business Support</p>
           <h1>
             I make technology
             <span>work for people.</span>
@@ -253,6 +226,7 @@ export default function Home() {
             <li>Website Design</li>
             <li>Flyers &amp; Social Media Content</li>
             <li>Virtual Administrative Support</li>
+            <li>Technical &amp; QA Support</li>
           </ul>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
@@ -295,7 +269,7 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Career highlights">
-        <div><strong>8</strong><span>Java applications documented</span></div>
+        <div><strong>4</strong><span>Production-minded portfolio systems</span></div>
         <div><strong>40+</strong><span>Daily support requests handled</span></div>
         <div><strong>3+</strong><span>Years managing a live website</span></div>
         <div><strong>6+</strong><span>Marketing content formats created</span></div>
@@ -524,8 +498,8 @@ export default function Home() {
 
       <section className="technical-section" aria-labelledby="technical-title">
         <div className="technical-heading">
-          <p className="eyebrow">Code · testing · documentation</p>
-          <h2 id="technical-title">The technical work behind the résumé.</h2>
+          <p className="eyebrow">Systems · QA · service operations</p>
+          <h2 id="technical-title">Professional work built around real workflows.</h2>
           <a
             href="https://github.com/ramphalharrilal?tab=repositories"
             target="_blank"
@@ -536,55 +510,19 @@ export default function Home() {
         </div>
         <div className="technical-list">
           {technicalProjects.map((project) => (
-            <article className="technical-item" key={project.index}>
+            <a
+              className="technical-item"
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              key={project.index}
+            >
               <span className="technical-index">{project.index}</span>
               <div>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <span className="technical-detail">{project.detail}</span>
+                <span className="technical-detail">{project.detail} · View repository ↗</span>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="python-section" id="python" aria-labelledby="python-title">
-        <div className="python-heading">
-          <div>
-            <p className="eyebrow">Python · four documented projects</p>
-            <h2 id="python-title">Small programs. Solid fundamentals.</h2>
-          </div>
-          <div className="python-intro">
-            <p>
-              Practical learning projects organized to show how I structure logic,
-              validate input, transform data and handle errors clearly.
-            </p>
-            <a
-              href="https://github.com/ramphalharrilal/python-projects"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Explore the Python repository <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-
-        <div className="python-grid">
-          {pythonProjects.map((project) => (
-            <a
-              className="python-card"
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-              key={project.number}
-            >
-              <span className="python-number">{project.number}</span>
-              <div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <span className="python-concepts">{project.concepts}</span>
-              </div>
-              <span className="python-arrow" aria-hidden="true">↗</span>
             </a>
           ))}
         </div>
@@ -642,7 +580,7 @@ export default function Home() {
           <div className="skill-group">
             <span>02</span>
             <h3>QA and documentation</h3>
-            <p>Test cases · Bug reporting · Regression · Jira · User guides · Escalation notes</p>
+            <p>Test planning · Gherkin · BDD · Bug reporting · Regression · Jira · Documentation</p>
           </div>
           <div className="skill-group">
             <span>03</span>
