@@ -121,6 +121,8 @@ const visualWork = [
   {
     media: "image",
     src: "/images/gallery/dreamhouse-christmas.webp",
+    width: 1920,
+    height: 960,
     alt: "Dreamhouse Christmas Big Sale promotional banner featuring appliances and furniture",
     title: "Christmas Big Sale",
     client: "Dreamhouse",
@@ -137,6 +139,8 @@ const visualWork = [
   {
     media: "image",
     src: "/images/gallery/kmca-board-member.webp",
+    width: 1600,
+    height: 900,
     alt: "KMCA graphic welcoming newly appointed board member Jacqueline Cooper",
     title: "Board Member Announcement",
     client: "KMCA",
@@ -145,6 +149,8 @@ const visualWork = [
   {
     media: "image",
     src: "/images/gallery/dreamhouse-diwali.webp",
+    width: 940,
+    height: 788,
     alt: "Dreamhouse Grand Divali Sale flyer for Whirlpool washing machines",
     title: "Grand Divali Sale",
     client: "Dreamhouse",
@@ -153,6 +159,8 @@ const visualWork = [
   {
     media: "image",
     src: "/images/gallery/kmca-website-launch.webp",
+    width: 1357,
+    height: 1920,
     alt: "KMCA website launch graphic showing the homeowner form on desktop and mobile",
     title: "Paperless Website Launch",
     client: "KMCA",
@@ -161,6 +169,8 @@ const visualWork = [
   {
     media: "image",
     src: "/images/gallery/dale-ray-book.webp",
+    width: 1024,
+    height: 800,
     alt: "To Hell and Back book promotion for Chaplain Dale Ray Smith",
     title: "To Hell and Back",
     client: "Dale Ray Smith",
@@ -169,6 +179,8 @@ const visualWork = [
   {
     media: "image",
     src: "/images/gallery/lime-n-shine.webp",
+    width: 1050,
+    height: 600,
     alt: "Black, red and green Lime N Shine car wash and detailing brand card",
     title: "Lime N Shine",
     client: "Small Business Creative",
@@ -177,6 +189,8 @@ const visualWork = [
   {
     media: "image",
     src: "/images/gallery/sonlight-graduation.webp",
+    width: 1200,
+    height: 1800,
     alt: "Sonlight Kindergarten Class of 2026 graduation congratulations poster",
     title: "Class of 2026",
     client: "Sonlight Kindergarten",
@@ -258,6 +272,9 @@ export default function Home() {
               className="portrait-cutout"
               src="/images/ramphal-hero-cutout.webp"
               alt="Ramphal Harrilal smiling in a blue plaid shirt"
+              width={1086}
+              height={1448}
+              decoding="async"
             />
           </div>
           <div className="availability">
@@ -378,7 +395,10 @@ export default function Home() {
               <img
                 src="/images/gallery/kmca-site.webp"
                 alt="Kenswick Meadows Community Association live website homepage"
-                loading="lazy"
+                width={1600}
+                height={697}
+                loading="eager"
+                decoding="async"
               />
               <span>Live website</span>
             </div>
@@ -401,7 +421,10 @@ export default function Home() {
               <img
                 src="/images/gallery/gaining-ground-site.webp"
                 alt="Gaining Ground Youth Services live website homepage"
-                loading="lazy"
+                width={1600}
+                height={673}
+                loading="eager"
+                decoding="async"
               />
               <span>Live website</span>
             </div>
@@ -432,7 +455,14 @@ export default function Home() {
                     <source src={item.src} type="video/mp4" />
                   </video>
                 ) : (
-                  <img src={item.src} alt={item.alt} loading="lazy" />
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    width={item.width}
+                    height={item.height}
+                    loading="eager"
+                    decoding="async"
+                  />
                 )}
                 <span className="gallery-media-type">{item.media === "video" ? "Motion" : "Design"}</span>
               </div>
