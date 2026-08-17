@@ -42,34 +42,34 @@ const featuredWork = [
 const technicalProjects = [
   {
     index: "A",
-    title: "RelayDesk Support Operations",
+    title: "A better way to manage customer messages",
     description:
-      "A privacy-aware WhatsApp support operations system with controlled knowledge responses, human handoff, prioritized tickets, audit events, webhook verification and automated tests.",
-    detail: "Node.js · Webhooks · HMAC · Privacy · Automated testing",
+      "When support messages pile up, customers wait and requests get lost. I built a system that handles approved routine questions, sends sensitive or unclear cases to a person, and gives the team one organized view of what needs attention.",
+    detail: "Faster replies · Human handoff · Clear ticket ownership",
     href: "https://github.com/ramphalharrilal/whatsapp-support-operations",
   },
   {
     index: "B",
-    title: "Hardware Inventory System",
+    title: "Fast, reliable inventory answers",
     description:
-      "A Java 17 operations dashboard designed around a real retail workflow, with layered architecture, validated CSV imports, inventory-risk metrics, JUnit coverage and continuous integration.",
-    detail: "Java 17 · Swing · Maven · JUnit · GitHub Actions",
+      "Staff should not have to scan a spreadsheet while a customer waits. This dashboard makes products, prices, quantities and low-stock risks easy to find, helping the team answer questions quickly and avoid stock surprises.",
+    detail: "Quick search · Stock visibility · Clear pricing",
     href: "https://github.com/ramphalharrilal/hardware-inventory-system",
   },
   {
     index: "C",
-    title: "Manual QA Portfolio",
+    title: "Fewer surprises before launch",
     description:
-      "A risk-based testing portfolio with a test plan, structured test cases, a reproducible defect report, regression coverage and business-readable Gherkin scenarios.",
-    detail: "Manual testing · Gherkin · BDD · Regression · Defect reporting",
+      "Broken forms, carts or payment steps cost time and customer trust. This project shows how I test the full customer journey, document problems clearly and check that updates have not broken something that already worked.",
+    detail: "Customer journey checks · Clear bug reports · Safer releases",
     href: "https://github.com/ramphalharrilal/manual-qa-portfolio",
   },
   {
     index: "D",
-    title: "IT Service Desk Operations",
+    title: "Support that does not start from zero",
     description:
-      "A service-desk operating playbook with incident models, case studies, Microsoft 365 workflows, escalation records and privacy-safe PowerShell diagnostics.",
-    detail: "PowerShell · Microsoft 365 · Triage · Escalation · Runbooks",
+      "Support becomes slower when every issue is handled differently. I created a reusable playbook for understanding impact, gathering the right information, making safe changes, confirming the fix and handing off with useful context.",
+    detail: "Consistent troubleshooting · Safer changes · Better handoffs",
     href: "https://github.com/ramphalharrilal/it-support-documentation",
   },
 ];
@@ -226,7 +226,7 @@ export default function Home() {
             <li>Website Design</li>
             <li>Flyers &amp; Social Media Content</li>
             <li>Virtual Administrative Support</li>
-            <li>Technical &amp; QA Support</li>
+            <li>Troubleshooting &amp; Quality Checks</li>
           </ul>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
@@ -269,7 +269,7 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Career highlights">
-        <div><strong>4</strong><span>Production-minded portfolio systems</span></div>
+        <div><strong>4</strong><span>Practical systems built around real workflows</span></div>
         <div><strong>40+</strong><span>Daily support requests handled</span></div>
         <div><strong>3+</strong><span>Years managing a live website</span></div>
         <div><strong>6+</strong><span>Marketing content formats created</span></div>
@@ -498,8 +498,12 @@ export default function Home() {
 
       <section className="technical-section" aria-labelledby="technical-title">
         <div className="technical-heading">
-          <p className="eyebrow">Systems · QA · service operations</p>
-          <h2 id="technical-title">Professional work built around real workflows.</h2>
+          <p className="eyebrow">Practical solutions</p>
+          <h2 id="technical-title">Solutions to problems people actually face.</h2>
+          <p className="technical-intro">
+            Each project starts with a real question: what is slowing people down,
+            and how can the work become clearer, faster or safer?
+          </p>
           <a
             href="https://github.com/ramphalharrilal?tab=repositories"
             target="_blank"
@@ -521,7 +525,7 @@ export default function Home() {
               <div>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <span className="technical-detail">{project.detail} · View repository ↗</span>
+                <span className="technical-detail">{project.detail} · See how it works ↗</span>
               </div>
             </a>
           ))}
