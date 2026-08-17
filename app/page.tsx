@@ -40,7 +40,7 @@ const featuredWork = [
   {
     number: "05",
     type: "Portfolio & storytelling",
-    title: "Dale Ray - Gaining Ground Youth Services 501 C 3 Nonprofit",
+    title: "Dale Ray — Gaining Ground Youth Services, a 501(c)(3) nonprofit",
     description:
       "Organized the nonprofit's mission, services, testimonials, videos and Dale Ray's life story into a clear public portfolio supporting its community work.",
     tags: ["Portfolio", "Storytelling", "Video", "Brand direction"],
@@ -97,7 +97,7 @@ const clientReviews = [
   },
   {
     name: "Dale Ray",
-    organization: "Gaining Ground Youth Services 501 C 3 Nonprofit",
+    organization: "Gaining Ground Youth Services, a 501(c)(3) nonprofit",
     location: "Houston, Texas",
     emoticon: "👨🏿‍🏫",
     reaction: "💡",
@@ -238,7 +238,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Websites · Technical Operations · QA · Business Support</p>
           <h1>
-            I make technology
+            I make technology{" "}
             <span>work for people.</span>
           </h1>
           <p className="hero-intro">
@@ -444,7 +444,7 @@ export default function Home() {
             </div>
             <div className="website-copy">
               <div>
-                <p>501 C 3 nonprofit website · Houston</p>
+                <p>501(c)(3) nonprofit website · Houston</p>
                 <h3>Gaining Ground Youth Services</h3>
               </div>
               <span aria-hidden="true">↗</span>
