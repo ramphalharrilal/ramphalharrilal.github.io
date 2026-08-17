@@ -8,10 +8,10 @@ Professional portfolio for Ramphal Harrilal, featuring technical support, softwa
 
 ## Featured work
 
-- Combination KEA Inventory System
-- Kenswick Meadows Community Association website and communications
-- Dreamhouse Furniture and Appliances digital marketing
-- Dale Ray - Gaining Ground Youth Services 501 C 3 Nonprofit
-- Java, Python, QA, and IT support projects
+- RelayDesk privacy-aware WhatsApp support operations
+- Java 17 hardware inventory operations dashboard
+- Manual QA portfolio with Gherkin and BDD scenarios
+- IT service desk operations and PowerShell diagnostics
+- Real-world website, communications, marketing, and client work
 
 The site is built with Next.js and exported as a static website for GitHub Pages.
