@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ramphal Harrilal Portfolio",
+  title: "RH Tech Support | Web Design & Digital Support",
   description:
-    "Customer-focused websites, business solutions, technical support, QA and digital work by Ramphal Harrilal.",
+    "Websites that work, professional web design, digital support and practical business solutions by Ramphal Harrilal.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
