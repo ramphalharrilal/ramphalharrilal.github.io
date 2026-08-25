@@ -212,9 +212,9 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Ramphal Harrilal, home">
+        <a className="brand" href="#top" aria-label="RH Tech Support, home">
           <span className="brand-mark">RH</span>
-          <span>Ramphal Harrilal</span>
+          <span>RH Tech Support</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
@@ -236,21 +236,21 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Websites · Technical Operations · QA · Business Support</p>
+          <p className="eyebrow">RH Tech Support · Web Design · Digital Support</p>
           <h1>
-            I make technology{" "}
-            <span>work for people.</span>
+            Websites that{" "}
+            <span>work.</span>
           </h1>
           <p className="hero-intro">
-            I build professional websites, create promotional content and provide
-            virtual business support, while bringing the same organized, practical
-            approach to technical support, QA and software.
+            I help businesses keep their websites, systems and day to day operations
+            running smoothly through professional web design, digital support,
+            technical troubleshooting and practical business solutions.
           </p>
           <ul className="hero-services" aria-label="Featured services">
-            <li>Website Design</li>
-            <li>Flyers &amp; Social Media Content</li>
+            <li>Professional Web Design</li>
+            <li>Digital Content &amp; Promotions</li>
             <li>Virtual Administrative Support</li>
-            <li>Troubleshooting &amp; Quality Checks</li>
+            <li>Technical Support &amp; Quality Checks</li>
           </ul>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
