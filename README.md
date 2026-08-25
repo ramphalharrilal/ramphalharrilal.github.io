@@ -1,9 +1,9 @@
-# Ramphal Harrilal Portfolio
+# RH Tech Support
 
 [![CI](https://github.com/ramphalharrilal/ramphalharrilal.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/ramphalharrilal/ramphalharrilal.github.io/actions/workflows/ci.yml)
 [![Deploy](https://github.com/ramphalharrilal/ramphalharrilal.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/ramphalharrilal/ramphalharrilal.github.io/actions/workflows/deploy.yml)
 
-Business-focused portfolio for Ramphal Harrilal, showing websites, customer-protection tools, support systems, QA, digital operations, marketing, and real client work across the United States, Trinidad and Tobago, and worldwide.
+**Websites that work.** RH Tech Support is the business-focused portfolio of Ramphal Harrilal, showing professional web design, digital support, customer-protection tools, support systems, QA, marketing, and real client work across the United States, Trinidad and Tobago, and worldwide.
 
 ## Live website
 
