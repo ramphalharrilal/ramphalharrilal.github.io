@@ -324,7 +324,7 @@ export default function Home() {
               <a className="button button-primary" href="#contact">
                 Start a conversation <span aria-hidden="true">↘</span>
               </a>
-              <span>Autoplays muted · Turn sound on for the voiceover</span>
+              <span>Voiceover plays once when allowed · Tap sound if muted</span>
             </div>
           </div>
 
