@@ -253,8 +253,8 @@ export default function Home() {
             <li>Technical Support &amp; Quality Checks</li>
           </ul>
           <div className="hero-actions">
-            <a className="button button-primary" href="#work">
-              Explore my work <span aria-hidden="true">↓</span>
+            <a className="button button-primary" href="#showreel">
+              Watch the 27-sec overview <span aria-hidden="true">↓</span>
             </a>
             <a
               className="button button-quiet"
@@ -300,6 +300,60 @@ export default function Home() {
         <div><strong>40+</strong><span>Daily support requests handled</span></div>
         <div><strong>3+</strong><span>Years managing a live website</span></div>
         <div><strong>6+</strong><span>Marketing content formats created</span></div>
+      </section>
+
+      <section className="showreel-section" id="showreel" aria-labelledby="showreel-title">
+        <div className="showreel-shell">
+          <div className="showreel-copy">
+            <p className="eyebrow">27 seconds · Full capabilities</p>
+            <h2 id="showreel-title">Websites are only the beginning.</h2>
+            <p className="showreel-intro">
+              I build the website, support the people behind it, test what matters and
+              improve the everyday digital workflow. This short film brings the full
+              RH Tech Support story to life.
+            </p>
+            <ul className="showreel-services" aria-label="Capabilities featured in the video">
+              <li>Web &amp; WordPress</li>
+              <li>Microsoft 365</li>
+              <li>QA &amp; automation</li>
+              <li>Digital operations</li>
+            </ul>
+            <div className="showreel-actions">
+              <a className="button button-primary" href="#contact">
+                Start a conversation <span aria-hidden="true">↘</span>
+              </a>
+              <span>Voiceover included · Press play with sound</span>
+            </div>
+          </div>
+
+          <div className="showreel-stage">
+            <div className="showreel-orbit showreel-orbit-one" aria-hidden="true" />
+            <div className="showreel-orbit showreel-orbit-two" aria-hidden="true" />
+            <div className="showreel-video-frame">
+              <div className="showreel-video-top" aria-hidden="true">
+                <span>RH Tech Support</span>
+                <span>00:27</span>
+              </div>
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster="/images/gallery/rh-tech-support-full-capabilities-v6.png"
+                aria-label="RH Tech Support full capabilities promotional video"
+              >
+                <source
+                  src="/images/gallery/rh-tech-support-full-capabilities-v6.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support embedded video.
+              </video>
+              <div className="showreel-video-bottom" aria-hidden="true">
+                <span>Websites that work.</span>
+                <span>↗</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="work-section" id="work">
@@ -744,3 +798,4 @@ export default function Home() {
     </main>
   );
 }
+
