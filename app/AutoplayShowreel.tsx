@@ -9,34 +9,58 @@ export default function AutoplayShowreel() {
     const video = videoRef.current;
     if (!video) return;
 
-    const startPlayback = () => {
-      video.muted = true;
+    let initialAttempted = false;
+
+    const startFirstPlay = () => {
+      if (initialAttempted) return;
+      initialAttempted = true;
+      video.currentTime = 0;
+      video.muted = false;
+
       void video.play().catch(() => {
-        // Browsers that block all autoplay still leave the controls available.
+        // Most browsers block unmuted autoplay for first-time visitors.
+        video.muted = true;
+        void video.play().catch(() => {
+          // Controls remain available if the browser blocks all autoplay.
+        });
       });
     };
 
     const resumeWhenVisible = () => {
-      if (document.visibilityState === "visible" && video.paused) startPlayback();
+      if (document.visibilityState === "visible" && video.paused) {
+        video.muted = true;
+        void video.play().catch(() => {});
+      }
     };
 
-    startPlayback();
-    video.addEventListener("canplay", startPlayback);
+    if (video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
+      startFirstPlay();
+    } else {
+      video.addEventListener("canplay", startFirstPlay, { once: true });
+    }
     document.addEventListener("visibilitychange", resumeWhenVisible);
 
     return () => {
-      video.removeEventListener("canplay", startPlayback);
+      video.removeEventListener("canplay", startFirstPlay);
       document.removeEventListener("visibilitychange", resumeWhenVisible);
     };
   }, []);
+
+  const replayMuted = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.currentTime = 0;
+    void video.play().catch(() => {});
+  };
 
   return (
     <video
       ref={videoRef}
       autoPlay
       controls
-      loop
       muted
+      onEnded={replayMuted}
       playsInline
       preload="auto"
       poster="/images/gallery/rh-tech-support-full-capabilities-v6.png"
