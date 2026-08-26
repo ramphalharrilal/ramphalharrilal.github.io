@@ -1,3 +1,5 @@
+import AutoplayShowreel from "./AutoplayShowreel";
+
 const featuredWork = [
   {
     number: "01",
@@ -334,22 +336,7 @@ export default function Home() {
                 <span>RH Tech Support</span>
                 <span>00:27</span>
               </div>
-              <video
-                autoPlay
-                controls
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                poster="/images/gallery/rh-tech-support-full-capabilities-v6.png"
-                aria-label="RH Tech Support full capabilities promotional video"
-              >
-                <source
-                  src="/images/gallery/rh-tech-support-full-capabilities-v6.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support embedded video.
-              </video>
+              <AutoplayShowreel />
               <div className="showreel-video-bottom" aria-hidden="true">
                 <span>Websites that work.</span>
                 <span>↗</span>
