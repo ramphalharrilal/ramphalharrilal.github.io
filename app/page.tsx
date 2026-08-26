@@ -322,7 +322,7 @@ export default function Home() {
               <a className="button button-primary" href="#contact">
                 Start a conversation <span aria-hidden="true">↘</span>
               </a>
-              <span>Voiceover included · Press play with sound</span>
+              <span>Autoplays muted · Turn sound on for the voiceover</span>
             </div>
           </div>
 
@@ -335,7 +335,10 @@ export default function Home() {
                 <span>00:27</span>
               </div>
               <video
+                autoPlay
                 controls
+                loop
+                muted
                 playsInline
                 preload="metadata"
                 poster="/images/gallery/rh-tech-support-full-capabilities-v6.png"
