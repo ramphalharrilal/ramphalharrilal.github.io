@@ -214,9 +214,9 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="RH Tech Support, home">
-          <span className="brand-mark">RH</span>
-          <span>RH Tech Support</span>
+        <a className="brand" href="#top" aria-label="SZARA, home">
+          <span className="brand-mark">S.</span>
+          <span>SZARA</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
@@ -238,7 +238,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">RH Tech Support · Web Design · Digital Support</p>
+          <p className="eyebrow">SZARA · Web Design · Digital Support</p>
           <h1>
             Websites that{" "}
             <span>work.</span>
@@ -311,8 +311,8 @@ export default function Home() {
             <h2 id="showreel-title">Websites are only the beginning.</h2>
             <p className="showreel-intro">
               I build the website, support the people behind it, test what matters and
-              improve the everyday digital workflow. This short film brings the full
-              RH Tech Support story to life.
+              improve the everyday digital workflow. This visual showreel highlights the work behind SZARA. Use the narration button
+              to hear our updated story.
             </p>
             <ul className="showreel-services" aria-label="Capabilities featured in the video">
               <li>Web &amp; WordPress</li>
@@ -324,7 +324,7 @@ export default function Home() {
               <a className="button button-primary" href="#contact">
                 Start a conversation <span aria-hidden="true">↘</span>
               </a>
-              <span>Voiceover plays once when allowed · Tap sound if muted</span>
+              <span>Select Play narration to hear the updated SZARA story</span>
             </div>
           </div>
 
@@ -333,8 +333,8 @@ export default function Home() {
             <div className="showreel-orbit showreel-orbit-two" aria-hidden="true" />
             <div className="showreel-video-frame">
               <div className="showreel-video-top" aria-hidden="true">
-                <span>RH Tech Support</span>
-                <span>00:27</span>
+                <span>SZARA</span>
+                <span>Showreel</span>
               </div>
               <AutoplayShowreel />
               <div className="showreel-video-bottom" aria-hidden="true">
