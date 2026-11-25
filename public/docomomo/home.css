@@ -60,3 +60,6 @@ footer .shell { display: flex; justify-content: space-between; align-items: cent
 #water-motion { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:58% 55%; z-index:-2; pointer-events:none; }
 #motion-toggle { background:#151b17d9; font-size:.85rem; min-height:44px; }
 @media(max-width:540px){ #motion-toggle { font-size:.75rem; } }
+
+/* Keep the architectural hero stationary from the very first paint. */
+.hero-photo, #water-motion { transform:none !important; animation:none !important; transition:none !important; }
