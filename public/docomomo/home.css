@@ -55,3 +55,8 @@ footer .shell { display: flex; justify-content: space-between; align-items: cent
 
 .mast img { height:auto; } .mast nav a { padding-block:.5rem; } hr { border:0; border-top:1px solid #acae9f; margin:3rem 0; } .events p:not(.label) { max-width:64ch; } .events .button { margin-block:.25rem; } #about { border-top:1px solid #acae9f; } [hidden] { display:none !important; }
 @media(max-width:540px){ .mast { align-items:start; gap:.1rem; flex-direction:column; } .mast img { width:155px; } .mast nav { justify-content:space-between; width:100%; } html { scroll-padding-top:6.5rem; } }
+
+/* Water-only motion overlay uses the same responsive crop as the original photograph. */
+#water-motion { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:58% 55%; z-index:-2; pointer-events:none; }
+#motion-toggle { background:#151b17d9; font-size:.85rem; min-height:44px; }
+@media(max-width:540px){ #motion-toggle { font-size:.75rem; } }
