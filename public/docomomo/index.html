@@ -7,7 +7,18 @@
 <meta name="theme-color" content="#171f1b">
 <title>Minnesota Modern | Docomomo US/MN design concept</title>
 <link rel="stylesheet" href="home.css?v=water4">
-<script src="home.js?v=water4" defer></script>
+<style>
+.hero-track{--mast-height:80px;position:relative}
+.hero-track.is-immersive{height:calc(185svh - var(--mast-height))}
+.hero-track.is-immersive .hero{position:sticky;top:var(--mast-height);height:calc(100svh - var(--mast-height));min-height:0}
+#hero-depth{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}
+.hero-copy .button{margin:.2rem 0}
+#depth-toggle{background:#151b17d9;font-size:.85rem;min-height:44px}
+#depth-hint{margin-top:1rem;font-size:.88rem;color:#fff}
+@media(max-width:650px){.hero-track.is-immersive{height:calc(155svh - var(--mast-height))}.hero-track.is-immersive .hero-copy h1{font-size:clamp(3.5rem,12vw,6rem)}.hero-track.is-immersive .hero-copy{padding-top:1.25rem;padding-bottom:4.3rem}}
+@media(max-height:590px){.hero-track.is-immersive{height:auto}.hero-track.is-immersive .hero{position:relative;top:0;height:auto;min-height:80svh}}
+@media(prefers-reduced-motion:reduce){.hero-track.is-immersive{height:auto}.hero-track.is-immersive .hero{position:relative;top:0;height:auto;min-height:min(80svh,850px)}#hero-depth,#depth-toggle,#depth-hint{display:none!important}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -16,19 +27,23 @@
 <nav aria-label="Main"><a href="#research">Explore</a><a href="#places">Registry</a><a href="#events">Events</a><a href="#news">News &amp; advocacy</a><a href="#about">About &amp; support</a></nav>
 </header>
 <main id="main">
+<div class="hero-track" id="hero-track">
 <section class="hero" aria-labelledby="title">
 <img class="hero-photo" src="demo/assets/plaza-today-1600.webp" srcset="demo/assets/plaza-today-640.webp 640w, demo/assets/plaza-today-1080.webp 1080w, demo/assets/plaza-today-1600.webp 1600w" sizes="100vw" alt="Concrete fountains and reflecting pool at Peavey Plaza" fetchpriority="high">
 <video id="hero-video" data-src="demo/assets/plaza-waterfall-loop.mp4?v=water4" muted loop playsinline preload="auto" aria-hidden="true" hidden></video>
+<canvas id="hero-depth" aria-hidden="true" hidden></canvas>
 <div class="shade"></div>
 <div class="hero-copy">
 <p class="label">Docomomo US/MN · Design concept</p>
 <h1 id="title">Minnesota<br>Modern</h1>
 <p>Explore the architecture, landscapes, and histories of Minnesota’s Modern Movement.</p>
-<a class="button" href="demo/">Explore Peavey Plaza</a> <a class="button" href="experience.html#tickets">Try tour tickets</a> <a class="button" href="immersive.html">Immersive plaza study</a>
+<a class="button" href="demo/">Explore Peavey Plaza</a> <a class="button" href="experience.html#tickets">Try tour tickets</a>
+<p id="depth-hint" hidden>Scroll to move into Peavey Plaza</p>
 </div>
-<div class="hero-caption"><span>Peavey Plaza · Minneapolis · 1975</span><button type="button" id="video-toggle" aria-pressed="true" hidden>Pause waterfall video</button></div>
+<div class="hero-caption"><span>Peavey Plaza · Minneapolis · 1975</span><button type="button" id="depth-toggle" aria-pressed="false" hidden>Disable immersive motion</button><button type="button" id="video-toggle" aria-pressed="true" hidden>Pause waterfall video</button></div>
 </section>
-<p class="credit"><a href="https://commons.wikimedia.org/wiki/File:Peavey_Plaza,_Minneapolis_7-5-2025_-_Explored_-_Flickr_-_Sharon_Mollerus.jpg">Sharon Mollerus, 2025</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · Cropped for display; homepage water motion is a digital adaptation by SZARA, not documentary footage.</p>
+</div>
+<p class="credit"><a href="https://commons.wikimedia.org/wiki/File:Peavey_Plaza,_Minneapolis_7-5-2025_-_Explored_-_Flickr_-_Sharon_Mollerus.jpg">Sharon Mollerus, 2025</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · Cropped for display; homepage depth motion and fallback water video are digital adaptations by SZARA, not documentary footage.</p>
 <section class="shell places" id="places">
 <div class="heading"><div><p class="label">Buildings and landscapes</p><h2>Places to explore</h2></div><a href="https://www.docomomo-us-mn.org/modern-registry.html">Chapter registry</a> <a href="experience.html#collection">Explore the collection</a></div>
 <div class="places-grid">
@@ -47,5 +62,28 @@
 <a class="button dark" href="https://www.docomomo-us-mn.org/2026-tour-day.html">View the archived tour</a> <a class="button dark" href="experience.html#tickets">Try the registration experience</a>
 </section>
 <section class="shell events" id="news"><p class="label">News and community</p><h2>Stay connected</h2><div class="places-grid"><article><p class="label">Chapter news</p><h3><a href="https://www.docomomo-us-mn.org/news">Latest news and advocacy</a></h3><p>Follow the chapter’s preservation work, announcements and stories.</p></article><article><p class="label">Social and video</p><h3><a href="https://vimeo.com/docomomousmn">Watch chapter recordings</a></h3><p>Explore recorded programs and educational material on the chapter’s video channel. This curated link illustrates the social tile; live feed selection is subject to chapter approval.</p></article></div></section><section class="shell events" id="about"><h2>About Docomomo US/MN</h2><p>The Minnesota chapter documents and advocates for the preservation of Modern Movement architecture and landscapes.</p><p><a href="https://www.docomomo-us-mn.org/">Contact and chapter information</a> · <a href="https://www.docomomo-us-mn.org/join.html">Join</a> · <a href="https://www.docomomo-us-mn.org/donate.html">Donate</a> · <a href="experience.html#volunteer">Volunteer publishing preview</a></p></section></main><footer><div class="shell"><p>Homepage design concept by SZARA for Docomomo US/MN</p><a href="https://www.docomomo-us-mn.org/">Official chapter website</a></div></footer>
+<script>
+(()=>{'use strict';
+const el=id=>document.getElementById(id),canvas=el('hero-depth'),base=document.querySelector('.hero-photo'),track=el('hero-track'),mast=document.querySelector('.mast'),motion=el('depth-toggle'),hint=el('depth-hint'),reduce=matchMedia('(prefers-reduced-motion: reduce)');
+let render=null,frame=0,disabled=false,fallback=false;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),smooth=(a,b,x)=>{let t=clamp((x-a)/(b-a));return t*t*(3-2*t)};
+function renderer(pic){
+ const gl=canvas.getContext('webgl',{antialias:false,alpha:false,depth:false});if(!gl)return null;
+ const prog=gl.createProgram();for(const [type,src] of [[gl.VERTEX_SHADER,'attribute vec3 pos;uniform vec2 crop;uniform float travel;varying vec2 uv;void main(){uv=pos.xy;vec2 p=(pos.xy*2.-1.)*vec2(1.,-1.);float d=pos.z;float z=1.-.085*travel*d;p=(p-vec2(.045,.012)*travel*d)/z;gl_Position=vec4(p*crop*1.06,0.,1.);}'],[gl.FRAGMENT_SHADER,'precision mediump float;varying vec2 uv;uniform sampler2D tex;void main(){gl_FragColor=texture2D(tex,uv);}']]){const sh=gl.createShader(type);gl.shaderSource(sh,src);gl.compileShader(sh);if(!gl.getShaderParameter(sh,gl.COMPILE_STATUS))return null;gl.attachShader(prog,sh)}gl.linkProgram(prog);if(!gl.getProgramParameter(prog,gl.LINK_STATUS))return null;gl.useProgram(prog);
+ // Conservative estimated depth for the licensed frontal photograph: distant trees/buildings, middle concrete terraces, nearest reflecting pool.
+ const verts=[],idx=[],nx=160,ny=90;for(let y=0;y<=ny;y++)for(let x=0;x<=nx;x++){let u=x/nx,v=y/ny,i=y*(nx+1)+x;let d=.12+.43*smooth(.29,.47,v)+.39*smooth(.75,1,v);d+=.07*Math.exp(-Math.pow((u-.52)/.32,2))*smooth(.42,.57,v)*(1-smooth(.72,.78,v));verts.push(u,v,clamp(d));if(x<nx&&y<ny)idx.push(i,i+1,i+nx+1,i+1,i+nx+2,i+nx+1)}
+ function buffer(target,data){gl.bindBuffer(target,gl.createBuffer());gl.bufferData(target,data,gl.STATIC_DRAW)}buffer(gl.ARRAY_BUFFER,new Float32Array(verts));buffer(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(idx));const pos=gl.getAttribLocation(prog,'pos');gl.enableVertexAttribArray(pos);gl.vertexAttribPointer(pos,3,gl.FLOAT,false,0,0);
+ gl.bindTexture(gl.TEXTURE_2D,gl.createTexture());for(const a of [gl.TEXTURE_WRAP_S,gl.TEXTURE_WRAP_T])gl.texParameteri(gl.TEXTURE_2D,a,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,pic);const crop=gl.getUniformLocation(prog,'crop'),travel=gl.getUniformLocation(prog,'travel');
+ return t=>{let w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;let scale=Math.min(devicePixelRatio||1,1.35,1600/Math.max(w,h)),cw=Math.max(1,Math.round(w*scale)),ch=Math.max(1,Math.round(h*scale));if(canvas.width!==cw||canvas.height!==ch){canvas.width=cw;canvas.height=ch}gl.viewport(0,0,cw,ch);let r=(pic.naturalWidth/pic.naturalHeight)/(w/h);gl.uniform2f(crop,Math.max(1,r),Math.max(1,1/r));gl.uniform1f(travel,smooth(0,1,t));gl.drawElements(gl.TRIANGLES,idx.length,gl.UNSIGNED_SHORT,0)};
+}
+
+function measure(){track.style.setProperty('--mast-height',Math.ceil(mast.getBoundingClientRect().height)+'px')}
+function redraw(){if(frame)return;frame=requestAnimationFrame(()=>{frame=0;if(!render||disabled||reduce.matches||fallback){canvas.hidden=true;return}const rect=track.getBoundingClientRect(),height=canvas.parentElement.clientHeight,range=Math.max(1,rect.height-height),t=clamp((mast.getBoundingClientRect().bottom-rect.top)/range);canvas.hidden=false;render(t)})}
+function sync(){const active=!!render&&!fallback&&!disabled&&!reduce.matches;measure();track.classList.toggle('is-immersive',active);motion.hidden=!render||fallback||reduce.matches;motion.textContent=disabled?'Enable immersive motion':'Disable immersive motion';motion.setAttribute('aria-pressed',String(disabled));hint.hidden=!active;redraw()}
+function useFallback(){if(fallback)return;fallback=true;render=null;sync();if(!reduce.matches){const js=document.createElement('script');js.src='home.js?v=water4';document.head.append(js)}}
+motion.addEventListener('click',()=>{disabled=!disabled;sync()});reduce.addEventListener('change',sync);canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();useFallback()});addEventListener('scroll',redraw,{passive:true});addEventListener('resize',()=>{measure();redraw()});if(window.ResizeObserver)new ResizeObserver(()=>{measure();redraw()}).observe(mast);
+(async()=>{try{await base.decode();render=renderer(base);if(!render){useFallback();return}sync()}catch(e){useFallback()}})();
+})();
+</script>
 </body>
 </html>
