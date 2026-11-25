@@ -1,0 +1,14 @@
+.brand { font-family: Oswald, sans-serif; text-decoration: none; font-size: clamp(1rem, 3vw, 1.8rem); }
+.events + .events { border-top: 1px solid #b9b9aa; }
+.fields { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1.5rem; }
+label { display: grid; gap: .35rem; width: min(100%, 25rem); }
+input, select { font: inherit; padding: .5rem; background: white; border: 1px solid #70766d; color: #171f1b; }
+.panel { padding: clamp(1rem, 4vw, 2rem); margin-top: 1.5rem; background: #e9e4d8; max-width: 50rem; }
+.panel fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.panel legend { font-weight: bold; margin-bottom: .75rem; }
+.panel button { color: white; margin-top: .8rem; }
+.panel label + label { margin-top: .7rem; }
+
+#collection h1 {font-size:clamp(3rem,7vw,7rem)} .records {padding:0;list-style:none;} .records li,details {border-top:1px solid #9ba098;padding:1rem 0;} .records span {display:block;font-size:.9rem;} .records a {font:500 clamp(1.65rem,3.2vw,3.25rem)/1.25 Oswald,sans-serif;} .records p {margin:.65rem 0;} summary {cursor:pointer;} input,select { max-width:100%;min-width:0;} button:disabled {color:#595c54;background:#d2d0c7;cursor:default;} .panel strong {display:block;}
+
+textarea{font:inherit;resize:vertical;padding:.5rem;max-width:100%;border:1px solid #70766d;} .draft-card{max-width:50rem;border-left:4px solid #ae4727;padding:1rem 1.5rem;margin-top:1rem;overflow-wrap:anywhere;background:#fffdf7;} .record-title {font-size:clamp(1.7rem,4vw,3.1rem);}
