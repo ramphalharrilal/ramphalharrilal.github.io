@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build"
+    "build": "next build",
+    "postbuild": "node -e \"const fs=require('node:fs'); fs.cpSync('public/docomomo','out/docomomo',{recursive:true}); for(const f of ['index.html','home.css','home.js','demo/assets/plaza-waterfall-loop.mp4']) { const s=fs.statSync('out/docomomo/'+f); if(!s.isFile()||!s.size) throw new Error('Missing or empty Docomomo asset: '+f); }\""
   },
   "dependencies": {
     "next": "16.2.6",
