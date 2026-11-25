@@ -7,6 +7,7 @@
   const ctx = surface.getContext('2d');
   if (!ctx) return;
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  let videoMode = false;
   let paused = preference.matches, visible = true, ready = false, request = 0, last = -Infinity, origin = 0;
   const make = () => document.createElement('canvas');
   const falls = make(), pool = make(), layer = make();
@@ -47,7 +48,7 @@
     paintMask(falls,cascades,2.5);
     paintMask(pool,[[[0,342],[640,342],[640,427],[0,427]]],5);
     ready = true;
-    toggle.hidden = false;
+    toggle.hidden = videoMode;
     sync();
   }
   function shifted(mask, dx1, dy1, dx2, dy2, blend, opacity) {
@@ -67,7 +68,7 @@
   }
   function frame(now) {
     request = 0;
-    if (!ready || paused || !visible || document.hidden) return;
+    if (videoMode || !ready || paused || !visible || document.hidden) return;
     if (now-last >= 1000/24) {
       if (!origin) origin = now;
       const t = (now-origin)/1000;
@@ -86,6 +87,7 @@
     request=requestAnimationFrame(frame);
   }
   function sync() {
+    if (videoMode) return;
     toggle.textContent = paused ? 'Play water motion' : 'Pause water motion';
     toggle.setAttribute('aria-pressed', String(!paused));
     if (paused || !visible || document.hidden || !ready) {
@@ -104,6 +106,39 @@
   if('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries=>{visible=entries[0].isIntersecting; sync();});
     observer.observe(photo);
+  }
+  const video = document.querySelector('#hero-video');
+  const videoToggle = document.querySelector('#video-toggle');
+  if (video && videoToggle) {
+    let userPaused = false, available = false;
+    const updateVideo = () => {
+      if (preference.matches) {
+        video.pause(); video.hidden = true; videoToggle.hidden = true;
+        videoMode = false; surface.hidden = false; toggle.hidden = !ready;
+        paused = true; sync(); return;
+      }
+      if (!available) {
+        if (!video.getAttribute('src')) video.src = video.dataset.src;
+        return;
+      }
+      videoMode = true;
+      if(request) cancelAnimationFrame(request);
+      request = 0;
+      surface.hidden = true; toggle.hidden = true;
+      video.hidden = false; videoToggle.hidden = false;
+      if (userPaused || !visible || document.hidden) video.pause();
+      else video.play().catch(()=>{userPaused=true; videoToggle.textContent='Play waterfall video'; videoToggle.setAttribute('aria-pressed','false');});
+      videoToggle.textContent = userPaused ? 'Play waterfall video' : 'Pause waterfall video';
+      videoToggle.setAttribute('aria-pressed', String(!userPaused));
+    };
+    video.addEventListener('loadeddata',()=>{available=true;updateVideo();});
+    video.addEventListener('error',()=>{available=false;videoMode=false;video.hidden=true;videoToggle.hidden=true;surface.hidden=false;toggle.hidden=!ready;sync();});
+    videoToggle.addEventListener('click',()=>{userPaused=!userPaused;updateVideo();});
+    document.addEventListener('visibilitychange',updateVideo);
+    if(preference.addEventListener) preference.addEventListener('change',updateVideo);
+    else if(preference.addListener) preference.addListener(updateVideo);
+    if('IntersectionObserver' in window) new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;updateVideo();}).observe(photo);
+    updateVideo();
   }
   photo.addEventListener('load',prepare);
   if(photo.complete && photo.naturalWidth) prepare();
